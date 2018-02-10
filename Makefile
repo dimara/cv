@@ -9,13 +9,13 @@ PS2PDF ?= ps2pdf
 PDFVIEWER ?= acroread
 SED ?= /bin/sed
 
-all: cv.pdf 
+all: cv.pdf
 
 clean:
 	rm -f *log *aux *blg *bbl *dvi cv.pdf *ps *~ *toc *nav *out *snm
 
-cv.dvi: cv.tex 
-#cv.bib 
+cv.dvi: cv.tex
+#cv.bib
 	$(LATEX) cv.tex
 #	$(BIBTEX) cv
 #	$(LATEX) cv.tex
