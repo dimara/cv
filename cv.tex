@@ -1,5 +1,7 @@
 \documentclass[margin,centered]{res}
 \usepackage{pifont}
+\usepackage{endnotes}
+\let\footnote=\endnote
 
 %\oddsidemargin -.5in
 %\evensidemargin -.5in
@@ -28,82 +30,204 @@
 
 \name{Dimitris Aragiorgis}
 
-
 \address{
 \begin{tabular}{l}
-Computing Systems Laboratory (CSLAB) \\
-Electrical and Computer Engineering (ECE) \\
-National Technical University of Athens (NTUA) \\
-Heroon Polytexneioy 9, 157 80 Zografos \\
-Athens, Greece  \\
+\texttt{Email:} \textbf{dimitris.aragiorgis@gmail.com}\\
+\texttt{Homepage:} http://cslab.ece.ntua.gr/$\sim$dimara/\\
+\texttt{Telephone:} 00306944903954\\
 \end{tabular}
 }
-
 
 
 \address{
 \begin{tabular}{r}
 \texttt{Date of Birth}: 21, August 1985\\
 \texttt{Nationality}: Greek\\
-\texttt{Email:} \textbf{dimara@cslab.ece.ntua.gr}\\
-\texttt{Homepage:} www.cslab.ece.ntua.gr/$\sim$dimara/ \\
-\texttt{Tel:} +306945700624   \\
+\texttt{GPG:} 7A0811BD
+% Arrikto Inc.\\
+% 3505 El Camino Real, Palo Alto, CA 94306\\
+% Mitropoleos 60, Athens, Greece\\
 \end{tabular}
 }
+
+
 
 \begin{resume}
 
 \section{\sc Education}
 \begin{list1}
 \item
-{\bf Diploma in Electrical and Computer Engineering, ECE, NTUA}, Greece. September 2011\\
-Thesis Title:  \textit{``Coexisting Scheduling Policies Boosting I/O Virtual Machines''}
+{\bf Diploma in Electrical and Computer Engineering, ECE, NTUA},\\
+Greece, Sep 2011
 \item
-{\bf Abitur/High School Diplom, Deutsche Schule Athen}, Greece. September 2003
+{\bf Abitur/High School Diplom, Deutsche Schule Athen},\\
+Greece, Sep 2003
 \end{list1}
-\section{\sc Research Interests}
-Computer Systems, Operating Systems, Virtualization, Scheduling, Profiling, Interconnects
+
+\section{Academia}
+\rule[3pt]{\textwidth}{0.4pt}
 
 \section{\sc Publications}
 D. Aragiorgis, A. Nanos, and N. Koziris: \textbf{Coexisting Scheduling Policies boosting I/O Virtual Machines}, in Proceedings of the 6th Workshop on Virtualization in HighPerformance Cloud computing (VHPC 2011), held in conjunction with Euro-par 2011, Bordeaux, France.
 
-\section{\sc Programming}
-\textit{Languages:} C, C++, bash, python \\
-\textit{Versioning:} git, svn\\
-\textit{Linux Kernel Background:} Scheduling, Network Devices, procfs \\
-\textit{Virtualization:} Xen (split-driver model, scheduling) \\
-\textit{Web:} HTML, cgi-bin \\
-\textit{DataBase Management Systems:} Sybase, MySQL \\
+\section{\sc Conference\\Attendee}
+Cloud Computing Technology and Science 2011, Athens \footnote{CloudCom'11}\\
+Virtualization for High-Performance Cloud Computing 2011, Bordeaux \footnote{VHPC'11}
 
-\section{\sc Technical\\\&\\Language\\Skills}
-\textit{Operating Systems:} Linux, MS Windows \\
-\textit{System Administration:} DNS (bind), WWW (apache2), Mail (CommuniGate Pro), \\ DBMS (MySQL/Sybase), Networking (iptables, openVPN)\\
-\textit{Typesetting:} Vim, \LaTeX \\
-\textit{Languages:} English (fluent), German (fluent), Greek (mother tongue)
+\section{\sc Research Interests}
+Computer Systems, Operating Systems, Virtualization, Scheduling, Profiling, Interconnects, Storage
+
+\section{\sc Teaching\\Experience}
+Teaching Assistance in Operating Systems, ECE, NTUA, 2011-2013
+
+\section{Industy}
+\rule[3pt]{\textwidth}{0.4pt}
 
 \section{\sc Work\\Experience}
 \begin{list1}
 \item
-System Programmer for custom network applications, Prologic SA (2008-2010)
+  System Administrator, Developer, Integration Manager, Arrikto, 2015-present \footnote{http://www.arrikto.com}
 \item
-Customer Support for IT infrastructure, Prologic SA (2006-2009)
+  System Programmer of Synnefo Cloud IAAS software, GRNET, 2012-2015 \footnote{https://www.synnefo.org, https://okeanos.grnet.gr}
+\item
+  Design and Implementation of Visitor Management System, Air Force, 2013 \footnote{https://github.com/dimara/keda}
+\item
+  System Programmer for custom network applications, Prologic SA, 2008-2010
+\item
+  Customer Support for IT infrastructure, Prologic SA, 2006-2009
 \end{list1}
 
-\section{\sc Teaching\\Experience}
-Teaching Assistance in Operating Systems, ECE, NTUA (Sept 2011 – present)
+\section{\sc Programming\\Experience}
+\textit{Languages:} Python, C, bash \\
+\textit{Frameworks:} Django\\
+\textit{Buildsystems:} CMake, Make, Webpack\\
+\textit{Software Packaging:} Debian \\
+\textit{Virtualization:} Xen (split-driver model, scheduling), QEMU (virtio, SCSI)\\
+\textit{Debugging:} strace, tcpdump, gdb, pyrasite
 
-\section{\sc External\\Referee}
-Virtualization for High-Performance Cloud Computing 2011 (VHPC'11)\\
-Cloud Computing Technology and Science 2011 (CloudCom'11)
+\section{\sc Technical\\Skills}
+\textit{Operating Systems:} Linux, MS Windows \\
+\textit{Networking:} iptables, ferm, OpenVPN, PXE, openvswitch, vxlan\\
+\textit{Services:} Apache2, nginx, Postfix, LDAP, dnsmasq\\
+\textit{Virtualization:} QEMU, Xen, VMware ESXi, libvirt, OpenStack, Ganeti, Synnefo\\
+\textit{Containers:} Docker, Kubernetes\\
+\textit{Distributed Systems:} Ceph, etcd, Cassandra\\
+\textit{Hardware Setup:} Physical Servers (HP, IBM, SuperMicro), Switches (HP, NetGear) \\
+\textit{Configuration Management:} Ansible\\
+\textit{Continuous Integration:} Buildbot
 
+\section{\sc Basic\\Knowledge}
+\textit{Web:} HTML, JavaScript, cgi-bin \\
+\textit{DataBase Management Systems:} PostgreSQL, MySQL, CQL \\
+\textit{Linux Kernel:} Scheduling, Network Devices, Block Devices, Device Mapper, procfs
+
+\section{\sc Conference\\Attendee}
+GanetiCon 2016, Dublin\\
+GanetiCon 2015, Prague\\
+GanetiCon 2014, Portland\\
+Xen Hackathon 2013, Google Docks Dublin\\
+GanetiCon 2013, Athens
+
+\section{Public Presence}
+\rule[3pt]{\textwidth}{0.4pt}
+
+\section{\sc OpenSource\\Contributions}
+\begin{list1}
+\item
+  Google Ganeti virtual machine cluster management tool \#4 contributor \footnote{https://github.com/ganeti/ganeti}
+\item
+  Synnefo IAAS cloud software \footnote{https://github.com/grnet/synnefo}
+\item
+  QEMU machine emulator and virtualizer \footnote{https://github.com/qemu/qemu}
+\item
+  NFQUEUE-based DHCP, DHCPv6 and RA server \footnote{https://github.com/grnet/snf-nfdhcpd}
+\item
+  Scapy python-based interactive packet manipulation library \footnote{https://github.com/secdev/scapy}
+\item
+  XenServer Windows Virtual Network Interface Device Driver \footnote{https://github.com/xenserver/win-xenvif}
+\end{list1}
 
 \section{\sc Distinctions\\\& Awards}
-Awards for distinction in nation-wide contest on Physics 2003
+\begin{list1}
+\item
+  Award for distinction in nation-wide contest on Physics 2003
+\item
+  Google's open source contributor award proposed by Iustin Pop 2014
+\end{list1}
+
+\section{Highlights}
+\rule[3pt]{\textwidth}{0.4pt}
+
+\section{\sc Nested ESXi}
+To be able to have ESXi servers on demand primarily for development, I manage
+to boot ESXi on QEMU. To do, and be able to take advantage of nested
+virtualization features, I had to dig into QEMU and Linux kernel code, and
+cherry-pick couple of commits to our production environment and only then we
+could have Hardware CPU and MMU support for our nested VMs.
+
+\section{\sc Windows BSOD on AWS}
+Arrikto software supports instand backup and launching of VMs. Our customers
+wanted to backup VMs running on on-prem, e.g., on ESXi, and then launch them to
+AWS running Xen. Booting Linux VMs was pretty easy. Booting Windows resulted to
+BSOD. And on AWS if it doen't boot all you have is a screenshot. Nothing else.
+In a nutshel, I had to simulate AWS EC2 environment locally, Xen Hypervisor,
+proper PVHVM setup, patch iPXE software, inspect XenStore, use Windows kernel
+debugger, patch official XenServer xenvif driver, install this drivers and
+tweak windows registry offline using WinPE and finally watch it boot.
+
+\section{\sc Poor QoS on internal DNS}
+At some point we experienced poor QoS on our internal setup. I had to tcpdump
+our routers and find out that there was a DNS loop that was exhausting the
+internal queues of our DNS server (dnsmasq) and thus the latency of random
+DNS replies we dramatically high.
+
+\section{\sc Ping packet loss}
+At some point we experienced packet loss on our internal network, i.e., 5\% for
+ping. This made the Ceph OSD daemons running on this host a bottleneck. We had
+a bond with two slave that we not properly configured on the switch. Still, we
+probably bumped into a kernel bug since, after using tcpdump on all involved
+interfaces, I noticed that the host was getting all packets but it was sending
+every now and then replies via the "wrong" slave. So LACP (802.3ad) was
+practically not working. Removing the one slave from the bond made Ceph
+operational again.
+
+\section{\sc Router dropping packets}
+We observed times when DNS would not respond, but retrying very soon after
+would generally work. I noticed that the kernel logs on the router were
+saying "kernel: nf\_conntrack: table full, dropping packet". Indeed
+/proc/net/nf\_conntrack was full. So I used NOTRACK for DNS replies and the
+problem was solved.
+
+
+\section{Additional Info}
+\rule[3pt]{\textwidth}{0.4pt}
+
+\section{\sc Language\\Skills}
+English (fluent), German (fluent), Greek (native)
+
+\section{\sc Preferred\\Working\\Environment}
+\textit{Operating System:} Linux (Debian)\\
+\textit{Windows Manager:} xmonad\\
+\textit{Versioning:} git\\
+\textit{Writing:} Vim, Sphinx, \LaTeX\\
+\textit{Mail:} Mutt
+
+\section{\sc Military\\Obligations}
+Fullfiled, Greek Air Force, 2013
+
+\section{\sc Membership}
+Greek Technical Chamber
+
+% \section{\sc Driving License}
+% Valid, Class B
+%
+\section{\sc Recommendation\\Letter}
+Available upon request (Arrikto, GRNET, CSLab@NTUA, Greek Air Force)
 
 \end{resume}
 
+\def\enoteheading{\section{Notes}\rule[0pt]{\textwidth}{0.4pt}}
+\parskip=2pt
+\theendnotes
+
 \end{document}
-
-
-
-
