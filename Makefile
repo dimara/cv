@@ -12,7 +12,7 @@ SED ?= /bin/sed
 all: cv.pdf
 
 clean:
-	rm -f *log *aux *blg *bbl *dvi cv.pdf *ps *~ *toc *nav *out *snm
+	rm -fv *log *aux *blg *bbl *dvi cv.pdf *ps *~ *toc *nav *out *snm
 
 cv.dvi: cv.tex
 #cv.bib

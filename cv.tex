@@ -86,7 +86,9 @@ Teaching Assistance in Operating Systems, ECE, NTUA, 2011-2013
 \section{\sc Work\\Experience}
 \begin{list1}
 \item
-  System Administrator, Developer, Integration Manager, Arrikto, 2015-present \footnote{http://www.arrikto.com}
+  Staff Engineer, Arrikto 2021-present \footnote{http://www.arrikto.com}
+\item
+  System Administrator, Developer, Integration Manager, Arrikto, 2015-2021 \footnote{http://www.arrikto.com}
 \item
   System Programmer of Synnefo Cloud IAAS software, GRNET, 2012-2015 \footnote{https://www.synnefo.org, https://okeanos.grnet.gr}
 \item
@@ -99,22 +101,22 @@ Teaching Assistance in Operating Systems, ECE, NTUA, 2011-2013
 
 \section{\sc Programming\\Experience}
 \textit{Languages:} Python, C, bash \\
-\textit{Frameworks:} Django\\
-\textit{Buildsystems:} CMake, Make, Webpack\\
-\textit{Software Packaging:} Debian \\
-\textit{Virtualization:} Xen (split-driver model, scheduling), QEMU (virtio, SCSI)\\
-\textit{Debugging:} strace, tcpdump, gdb, pyrasite
+\textit{Frameworks:} Django, Kubernetes\\
+\textit{Buildsystems:} CMake, Make, Webpack, Sphinx\\
+\textit{Software Packaging:} Helm, Kustomize, Debian deb, Windows WiX\\
+\textit{Configuration Management:} Ansible\\
+\textit{Continuous Integration:} Buildbot, GitHub Actions \\
+\textit{Debugging:} strace, tcpdump, gdb, pyrasite \\
 
 \section{\sc Technical\\Skills}
+\textit{Cloud Platforms:} AWS, GCP, Azure \\
 \textit{Operating Systems:} Linux, MS Windows \\
-\textit{Networking:} iptables, ferm, OpenVPN, PXE, openvswitch, vxlan\\
+\textit{Networking:} Istio, iptables, ferm, OpenVPN, PXE, openvswitch, vxlan\\
 \textit{Services:} Apache2, nginx, Postfix, LDAP, dnsmasq\\
 \textit{Virtualization:} QEMU, Xen, VMware ESXi, libvirt, OpenStack, Ganeti, Synnefo\\
 \textit{Containers:} Docker, Kubernetes\\
 \textit{Distributed Systems:} Ceph, etcd, Cassandra\\
 \textit{Hardware Setup:} Physical Servers (HP, IBM, SuperMicro), Switches (HP, NetGear) \\
-\textit{Configuration Management:} Ansible\\
-\textit{Continuous Integration:} Buildbot
 
 \section{\sc Basic\\Knowledge}
 \textit{Web:} HTML, JavaScript, cgi-bin \\
@@ -134,6 +136,8 @@ GanetiCon 2013, Athens
 \section{\sc OpenSource\\Contributions}
 \begin{list1}
 \item
+  KServe path-based serving \footnote{https://github.com/kserve/kserve}
+\item
   Google Ganeti virtual machine cluster management tool \#4 contributor \footnote{https://github.com/ganeti/ganeti}
 \item
   Synnefo IAAS cloud software \footnote{https://github.com/grnet/synnefo}
@@ -145,6 +149,8 @@ GanetiCon 2013, Athens
   Scapy python-based interactive packet manipulation library \footnote{https://github.com/secdev/scapy}
 \item
   XenServer Windows Virtual Network Interface Device Driver \footnote{https://github.com/xenserver/win-xenvif}
+\item
+  OpenStack Volume discovery and local storage management lib \footnote{https://github.com/openstack/os-brick}
 \end{list1}
 
 \section{\sc Distinctions\\\& Awards}
@@ -158,22 +164,91 @@ GanetiCon 2013, Athens
 \section{Highlights}
 \rule[3pt]{\textwidth}{0.4pt}
 
-\section{\sc Nested ESXi}
-To be able to have ESXi servers on demand primarily for development, I manage
-to boot ESXi on QEMU. To do, and be able to take advantage of nested
-virtualization features, I had to dig into QEMU and Linux kernel code, and
-cherry-pick couple of commits to our production environment and only then we
-could have Hardware CPU and MMU support for our nested VMs.
+\section{Arrikto}
 
-\section{\sc Windows BSOD on AWS}
-Arrikto software supports instand backup and launching of VMs. Our customers
+\section{\sc KServe performance tuning}
+Do a performance analysis on KServe inference services, manage to find the
+bottlenecks of vanilla setup and suggest tweaks for Istio and KNative to
+improve request throughput and latency.
+
+\section{\sc On-prem support}
+Add support for deploying our software on-prem, including air-gapped
+environments.
+
+\section{\sc MiniKF}
+Design and implementation of a stripped down version of our software as a
+pre-packaged VM on AWS, GCP, and Vagrand.
+
+\section{\sc Cloud Integration}
+Integrate and deploy our software on various Cloud Platforms (AWS, CGP, and
+Azure) and also on premises (NVIDIA Bright).
+
+\section{\sc Software containerization}
+Design and implementation of the containerization of our software that used
+to be appliance-oriented.
+
+\section{\sc Release management}
+Design the build system of the software, how to version, package and distribute
+it in the context of every commit is a release while emphasizing on a GitOps
+process for deploying it.
+
+\section{\sc Customer support}
+Be on-call and deal with Sev1 customer issues in real time, debug systems at
+scale, troubleshoot, and be able to identify even customer-side
+misconfiguration on Cloud platforms or on-prem.
+
+\section{\sc Full stack awareness}
+Know the whole stack of the software, know how all components integrate with
+each other, and be identify problematic scenarios.
+
+\section{\sc Bug hunting}
+Insist on finding the root cause of an issue, be able to reproduce it, and
+finally identify where the bug is and what need to be done for solving it.
+
+
+\section{GRNET}
+
+\section{\sc Device Hotplug in Ganeti}
+With Google Ganeti before v2.10, one had to reboot a VM in order to add/remove
+devices NICs/Disks. Managed to submit and merge upstream a PR supporting
+device hotplug for VMs running with the KVM hypervisor.
+
+\section{\sc L2 isolated Network in Synnefo}
+In synnefo, to be able to have private networks per user at first place we
+had to rely on physical VLANs. But this had a limit of approximately 1000
+private network. I designed a software implementation based on unique MAC
+prefixes and ebtables rules.
+
+\section{Air Force}
+
+\section{\sc Booking management platform}
+While doing military service, I designed and implemented a booking management
+platform for a resort of National Air Force. They have been using it since then.
+Up-and-running more than 10 years now.
+
+\section{Misc}
+
+\section{\sc BSOD on AWS}
+Arrikto software supports instant backup and launching of VMs. Our customers
 wanted to backup VMs running on on-prem, e.g., on ESXi, and then launch them to
 AWS running Xen. Booting Linux VMs was pretty easy. Booting Windows resulted to
-BSOD. And on AWS if it doen't boot all you have is a screenshot. Nothing else.
+BSOD. And on AWS if it doesn't boot all you have is a screenshot. Nothing else.
 In a nutshel, I had to simulate AWS EC2 environment locally, Xen Hypervisor,
 proper PVHVM setup, patch iPXE software, inspect XenStore, use Windows kernel
 debugger, patch official XenServer xenvif driver, install this drivers and
 tweak windows registry offline using WinPE and finally watch it boot.
+
+\section{\sc Packaging for Windows}
+Managed to have CMake running on Linux generate a setup.exe for Windows using
+PyInstaller, Wine and WiX toolset. This has been proved to be really helpful for
+out CI/CD since on each commit we had the corresponding Windows installer.
+
+\section{\sc Nested ESXi}
+To be able to have ESXi servers on demand, primarily for development, I manage
+to boot ESXi on QEMU. To do, and be able to take advantage of nested
+virtualization features, I had to dig into QEMU and Linux kernel code, and
+cherry-pick couple of commits to our production environment and only then we
+could have Hardware CPU and MMU support for our nested VMs.
 
 \section{\sc Poor QoS on internal DNS}
 At some point we experienced poor QoS on our internal setup. I had to tcpdump
@@ -181,7 +256,7 @@ our routers and find out that there was a DNS loop that was exhausting the
 internal queues of our DNS server (dnsmasq) and thus the latency of random
 DNS replies we dramatically high.
 
-\section{\sc Ping packet loss}
+\section{\sc Bond misconfiguration}
 At some point we experienced packet loss on our internal network, i.e., 5\% for
 ping. This made the Ceph OSD daemons running on this host a bottleneck. We had
 a bond with two slave that we not properly configured on the switch. Still, we
@@ -191,19 +266,18 @@ every now and then replies via the "wrong" slave. So LACP (802.3ad) was
 practically not working. Removing the one slave from the bond made Ceph
 operational again.
 
-\section{\sc Router dropping packets}
+\section{\sc Router misconfiguration}
 We observed times when DNS would not respond, but retrying very soon after
 would generally work. I noticed that the kernel logs on the router were
 saying "kernel: nf\_conntrack: table full, dropping packet". Indeed
 /proc/net/nf\_conntrack was full. So I used NOTRACK for DNS replies and the
 problem was solved.
 
-
 \section{Additional Info}
 \rule[3pt]{\textwidth}{0.4pt}
 
 \section{\sc Language\\Skills}
-English (fluent), German (fluent), Greek (native)
+English (fluent), German (adequate), Greek (native)
 
 \section{\sc Preferred\\Working\\Environment}
 \textit{Operating System:} Linux (Debian)\\
@@ -213,7 +287,7 @@ English (fluent), German (fluent), Greek (native)
 \textit{Mail:} Mutt
 
 \section{\sc Military\\Obligations}
-Fullfiled, Greek Air Force, 2013
+Fulfilled, Greek Air Force, 2013
 
 \section{\sc Membership}
 Greek Technical Chamber
