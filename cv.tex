@@ -250,28 +250,6 @@ virtualization features, I had to dig into QEMU and Linux kernel code, and
 cherry-pick couple of commits to our production environment and only then we
 could have Hardware CPU and MMU support for our nested VMs.
 
-\section{\sc Poor QoS on internal DNS}
-At some point we experienced poor QoS on our internal setup. I had to tcpdump
-our routers and find out that there was a DNS loop that was exhausting the
-internal queues of our DNS server (dnsmasq) and thus the latency of random
-DNS replies we dramatically high.
-
-\section{\sc Bond misconfiguration}
-At some point we experienced packet loss on our internal network, i.e., 5\% for
-ping. This made the Ceph OSD daemons running on this host a bottleneck. We had
-a bond with two slave that we not properly configured on the switch. Still, we
-probably bumped into a kernel bug since, after using tcpdump on all involved
-interfaces, I noticed that the host was getting all packets but it was sending
-every now and then replies via the "wrong" slave. So LACP (802.3ad) was
-practically not working. Removing the one slave from the bond made Ceph
-operational again.
-
-\section{\sc Router misconfiguration}
-We observed times when DNS would not respond, but retrying very soon after
-would generally work. I noticed that the kernel logs on the router were
-saying "kernel: nf\_conntrack: table full, dropping packet". Indeed
-/proc/net/nf\_conntrack was full. So I used NOTRACK for DNS replies and the
-problem was solved.
 
 \section{Additional Info}
 \rule[3pt]{\textwidth}{0.4pt}
