@@ -210,34 +210,34 @@ finally identify where the bug is and what need to be done for solving it.
 \section{GRNET}
 
 \section{\sc Device Hotplug in Ganeti}
-With Google Ganeti before v2.10, one had to reboot a VM in order to add/remove
-devices NICs/Disks. Managed to submit and merge upstream a PR supporting
-device hotplug for VMs running with the KVM hypervisor.
+In older version of Google Ganeti, one had to reboot a VM in order to
+add/remove devices NICs/Disks. Managed to submit and merge upstream a PR
+supporting device hotplug for VMs running with the KVM hypervisor.
 
 \section{\sc L2 isolated Network in Synnefo}
 In synnefo, to be able to have private networks per user at first place we
 had to rely on physical VLANs. But this had a limit of approximately 1000
-private network. I designed a software implementation based on unique MAC
+private network. I had designed a software implementation based on unique MAC
 prefixes and ebtables rules.
 
 \section{Air Force}
 
 \section{\sc Booking management platform}
-While doing military service, I designed and implemented a booking management
-platform for a resort of National Air Force. They have been using it
-since then, which translates to more that 10 years up-and-running.
+During military service, I designed and implemented a booking management
+platform from scratch for a resort of National Air Force. They have been using
+it since then, which translates to more than 10 years up-and-running.
 
 \section{Misc}
 
 \section{\sc BSOD on AWS}
-Arrikto software supports instant backup and launching of VMs. Our customers
-wanted to backup VMs running on on-prem, e.g., on ESXi, and then launch them to
-AWS running Xen. Booting Linux VMs was pretty easy. Booting Windows resulted to
-BSOD. And on AWS if it doesn't boot all you have is a screenshot. Nothing else.
-In a nutshel, I had to simulate AWS EC2 environment locally, Xen Hypervisor,
-proper PVHVM setup, patch iPXE software, inspect XenStore, use Windows kernel
-debugger, patch official XenServer xenvif driver, install this drivers and
-tweak windows registry offline using WinPE and finally watch it boot.
+Our customers wanted to backup VMs running on on-prem, e.g., on ESXi, and then
+be able to launch them on AWS. Booting Linux VMs was pretty easy. Booting
+Windows resulted to BSOD. And on AWS if it doesn't boot all you have is a
+screenshot. Nothing else. In a nutshel, I had to simulate AWS EC2 environment
+locally, Xen Hypervisor, proper PVHVM setup, patch iPXE software, inspect
+XenStore, use Windows kernel debugger, patch official XenServer xenvif driver,
+install this drivers and tweak windows registry offline using WinPE and
+finally watch it boot.
 
 \section{\sc Packaging for Windows}
 Managed to have CMake running on Linux generate a setup.exe for Windows using
