@@ -225,7 +225,7 @@ finally identify where the bug is and what need to be done for solving it.
 \section{GRNET}
 
 \section{\sc Device Hotplug in Ganeti}
-In older version of Google Ganeti, one had to reboot a VM in order to
+In older versions of Google Ganeti, one had to reboot a VM in order to
 add/remove devices NICs/Disks. Managed to submit and merge upstream a PR
 supporting device hotplug for VMs running with the KVM hypervisor.
 
@@ -239,8 +239,9 @@ prefixes and ebtables rules.
 
 \section{\sc Booking management platform}
 During military service, I designed and implemented a booking management
-platform from scratch for a resort of National Air Force. They have been using
-it since then, which translates to more than 10 years up-and-running.
+platform \footnote{https://github.com/dimara/keda} from scratch for a resort of
+National Air Force. They have been using it since then, which translates to
+more than 10 years up-and-running.
 
 \section{Misc}
 
@@ -257,11 +258,11 @@ finally watch it boot.
 \section{\sc Packaging for Windows}
 Managed to have CMake running on Linux generate a setup.exe for Windows using
 PyInstaller, Wine and WiX toolset. This has been proved to be really helpful for
-out CI/CD since on each commit we had the corresponding Windows installer.
+our CI/CD since on each commit we had the corresponding Windows installer.
 
 \section{\sc Nested ESXi}
-To be able to have ESXi servers on demand, primarily for development, I manage
-to boot ESXi on QEMU. To do, and be able to take advantage of nested
+To be able to have ESXi servers on demand, primarily for development, I managed
+to boot ESXi on QEMU. To do it, and be able to take advantage of nested
 virtualization features, I had to dig into QEMU and Linux kernel code, and
 cherry-pick couple of commits to our production environment and only then we
 could have Hardware CPU and MMU support for our nested VMs.
