@@ -169,6 +169,24 @@ finally identify where the bug is and what need to be done for solving it.
 \item[Infra]
 Set up physical servers and switches in our on-prem site, and use Ansible
 to configure them.
+\item[BSOD on AWS]
+Allow for backing up Windows VMs running on-prem, e.g., on ESXi, and be
+able to launch them on AWS. Initially we were getting BSOD, without being
+able to debug further. I had to simulate AWS EC2 environment
+locally, Xen Hypervisor, proper PVHVM setup, patch iPXE software, inspect
+XenStore, use Windows kernel debugger, patch official XenServer xenvif driver,
+install this drivers and tweak windows registry offline using WinPE and
+finally watch it boot.
+\item[Packaging for Windows]
+Managed to have CMake running on Linux generate a setup.exe for Windows using
+PyInstaller, Wine and WiX toolset. This has been proved to be really helpful for
+our CI/CD since on each commit we had the corresponding Windows installer.
+\item[Nested ESXi]
+To be able to have ESXi servers on demand, primarily for development, I managed
+to boot ESXi on Ganeti. To take advantage of nested
+virtualization features, I had to dig into QEMU and Linux kernel code, and
+cherry-pick couple of commits to our production environment and only then we
+could have Hardware CPU and MMU support for our nested VMs.
 \end{description}
 
 
@@ -195,32 +213,6 @@ During military service, I designed and implemented a booking management
 platform \footnote{https://github.com/dimara/keda} from scratch for a resort of
 National Air Force. They have been using it since then, which translates to
 more than 10 years up-and-running.
-\end{description}
-
-\section{\sc Misc}
-
-\begin{description}
-\item[BSOD on AWS]
-Our customers wanted to backup VMs running on on-prem, e.g., on ESXi, and then
-be able to launch them on AWS. Booting Linux VMs was pretty easy. Booting
-Windows resulted to BSOD. And on AWS if it doesn't boot all you have is a
-screenshot. Nothing else. In a nutshel, I had to simulate AWS EC2 environment
-locally, Xen Hypervisor, proper PVHVM setup, patch iPXE software, inspect
-XenStore, use Windows kernel debugger, patch official XenServer xenvif driver,
-install this drivers and tweak windows registry offline using WinPE and
-finally watch it boot.
-
-\item[Packaging for Windows]
-Managed to have CMake running on Linux generate a setup.exe for Windows using
-PyInstaller, Wine and WiX toolset. This has been proved to be really helpful for
-our CI/CD since on each commit we had the corresponding Windows installer.
-
-\item[Nested ESXi]
-To be able to have ESXi servers on demand, primarily for development, I managed
-to boot ESXi on QEMU. To do it, and be able to take advantage of nested
-virtualization features, I had to dig into QEMU and Linux kernel code, and
-cherry-pick couple of commits to our production environment and only then we
-could have Hardware CPU and MMU support for our nested VMs.
 \end{description}
 
 \section{Public Presence}
