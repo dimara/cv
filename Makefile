@@ -37,3 +37,5 @@ cv.pdf: cv.ps
 cv.pdfview: cv.pdf
 	"$(PDFVIEWER)" cv.pdf
 
+docs: cv.pdf
+	cp -v cv.pdf docs/
