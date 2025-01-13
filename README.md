@@ -6,10 +6,11 @@ Curriculum Vitae in LaTex
 
 Install build deps:
 ```
-sudo apt get install -y \
+sudo apt install -y \
   texlive-latex-base \
   texlive-latex-recommended \
   texlive-latex-extra \
+  texlive-fonts-extra \
   ghostscript
 ```
 
