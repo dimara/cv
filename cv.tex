@@ -113,14 +113,14 @@ D. Aragiorgis, A. Nanos, and N. Koziris: \textbf{Coexisting Scheduling Policies 
 
 \section{\sc Technical\\Skills}
   \textbf{Advanced}\\
-  Linux, Git, Kubernetes, Istio, etcd, Qemu/KVM, Docker, AWS, GCP, Python,
-  Bash, C, Rego/OPA, Django, CMake, Make, Kustomize, Helm, Debian, Ansible, Ganeti, NGINX,
+  Linux, Git, Kubernetes, Istio, Kyverno, Calico, etcd, Qemu/KVM, Docker, AWS, GCP, Python,
+  Bash, C, Rego/OPA, Django, CMake, Make, Kustomize, Helm, Debian, Ansible, Ganeti, Morpheus, NGINX,
   PXE, dnsmasq, OpenVPN, ferm, iptables, tcpdump, Sphinx, Vim, \LaTeX\\\\
   \textbf{Intermediate}\\
-  Azure, VMware ESXi, MS Windows, Xen, libvirt, Openstack, Ceph, Windows WiX,
+  Golang, CSI, Azure, VMware ESXi, MS Windows, Xen, libvirt, Openstack, Ceph, Windows WiX,
   Webpack, gdb, Buildbot, Apache2, strace\\\\
   \textbf{Basic}\\
-  Golang, C\texttt{++}, Cassandra, PostgreSQL, LDAP, Open vSwitch, Pyrasite,
+  C\texttt{++}, Cassandra, PostgreSQL, LDAP, Open vSwitch, Pyrasite,
   GitHub Actions, containerd, Scheduling, Network Devices, Block Devices,
   Device Mapper
 
@@ -198,6 +198,50 @@ Available upon request (HPE, Arrikto, GRNET, CSLab@NTUA, Greek Air Force)
 \section{\sc HPE}
 
 \begin{description}
+\item[Vault support]
+Be involved in adding support for Vault, design a least intrussive implementation
+based on webhooks to allow transitioning to using vault for mostly all secrets
+available in Kubernetes, with almost zero changes in apps. This satisfied requests
+comming from security office and allowed certification of our product that unblocked
+sales even more.
+\end{description}
+
+\begin{description}
+\item[Morpheus integration]
+Design and implement the transition to using Morpheus VME
+\footnote{https://www.hpe.com/us/en/morpheus-vm-essentials-software.html}
+as orchestrator platform to deploy our software stack on Morpheus
+Kubernetes Cluster. Co-ordinate with Morpheus core team, report and fix issues,
+and along with the disconnected support, eventually deliver PCAID that
+unblocked several customers.
+\end{description}
+
+\begin{description}
+\item[Disconnected support]
+Ensure the initial deployment of our stack as well as all dayN lifecycle ops
+can work on a pure disconnected on-prem environment. Design and implement tools
+and workflows that mirror necessary artifacts (images, NIMs, etc.) locally, and
+allow the stack to use them without needing to access the internet at any point.
+Contribute to NVIDIA NIM tools by reporting bugs related to data validation and
+propose performance improvements.
+\end{description}
+
+\begin{description}
+\item[ezdata CSI]
+ezdata CSI allows exteranl datasources be visible on demand inside user Pods
+without any workload restart. Identify issues, and eventually fix and make our
+custom CSI driver more robust.
+\end{description}
+
+\begin{description}
+\item[Toy-scale development]
+Ensure that our stack can be fully deployed on Kind using toy-scale external
+deps. This allowed smooth development and testing without any extra expensive
+hardware or cross team dependencies. This can leverage available GPUs on
+personal laptops to do basic AI testing with NIMs, Inferencing, etc.
+\end{description}
+
+\begin{description}
 \item[Multitenancy support]
 Ensure platform apps work in a multitenant environment where we want isolation
 between users but also supporting shared resources and collaboration. Ensure fine
@@ -207,7 +251,9 @@ grain authorization using OPA when accessing shared resources.
 \begin{description}
 \item[Integration with external storage systems]
 Design and implement integration with external storage systems and ensure smooth
-transition of existing customer Kubernetes deployments.
+transition of existing customer Kubernetes deployments. Propose upgrade procedure
+with storage class migration support to allow switching to new primary storage
+and gradually deprecate the old one.
 \end{description}
 
 \begin{description}
@@ -224,6 +270,7 @@ where customer deployments and HPE Support Team register and interact with
 a centralized management Platform.
 \end{description}
 
+\pagebreak
 \section{\sc Arrikto}
 
 \begin{description}
@@ -291,6 +338,7 @@ could have Hardware CPU and MMU support for our nested VMs.
 \end{description}
 
 
+\pagebreak
 \section{\sc GRNET}
 
 \begin{description}
